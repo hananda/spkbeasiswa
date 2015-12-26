@@ -1,0 +1,32 @@
+#header	{
+	width: 300px;
+	margin-left : 200px;
+	text-align: center;
+}
+
+#ttd {
+	margin-top: 50px;
+}
+
+#ttd font {
+	margin-left: 5px;
+}
+
+#ttd table {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#ttd .field{
+	width: 200px;
+}
+
+#tempatttd {
+	margin-top: 20px;
+	width: 300px;
+	margin-left: 450px;
+}
+
+#tandatangan{
+	height: 70px;
+}
