@@ -2,21 +2,21 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50505
+Source Server Version : 50141
 Source Host           : localhost:3306
 Source Database       : spkbeasiswa
 
 Target Server Type    : MYSQL
-Target Server Version : 50505
+Target Server Version : 50141
 File Encoding         : 65001
 
-Date: 2015-12-27 06:29:14
+Date: 2015-12-27 09:56:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for master_beasiswa
+-- Table structure for `master_beasiswa`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_beasiswa`;
 CREATE TABLE `master_beasiswa` (
@@ -31,7 +31,7 @@ CREATE TABLE `master_beasiswa` (
 INSERT INTO `master_beasiswa` VALUES ('1', 'Supersemar');
 
 -- ----------------------------
--- Table structure for master_detail_kriteria
+-- Table structure for `master_detail_kriteria`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_detail_kriteria`;
 CREATE TABLE `master_detail_kriteria` (
@@ -72,7 +72,7 @@ INSERT INTO `master_detail_kriteria` VALUES ('26', '5', '4 prestasi', '4');
 INSERT INTO `master_detail_kriteria` VALUES ('27', '5', '> 4 prestasi', '5');
 
 -- ----------------------------
--- Table structure for master_jurusan
+-- Table structure for `master_jurusan`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_jurusan`;
 CREATE TABLE `master_jurusan` (
@@ -91,7 +91,7 @@ INSERT INTO `master_jurusan` VALUES ('4', 'TEKNIK MESIN');
 INSERT INTO `master_jurusan` VALUES ('5', 'PKK');
 
 -- ----------------------------
--- Table structure for master_kriteria
+-- Table structure for `master_kriteria`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_kriteria`;
 CREATE TABLE `master_kriteria` (
@@ -111,7 +111,7 @@ INSERT INTO `master_kriteria` VALUES ('4', 'Semester', '1.2');
 INSERT INTO `master_kriteria` VALUES ('5', 'Prestasi Akademik / Non Akademik', null);
 
 -- ----------------------------
--- Table structure for master_mahasiswa
+-- Table structure for `master_mahasiswa`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_mahasiswa`;
 CREATE TABLE `master_mahasiswa` (
@@ -146,7 +146,7 @@ INSERT INTO `master_mahasiswa` VALUES ('16', 'GALUH DHATUNINGTYAS', 'SIDOSERMO 4
 INSERT INTO `master_mahasiswa` VALUES ('17', 'ISNI WIDAYANTI', 'DESA NGERAMBE', '', 'Pas_Photo.jpg', '5', '1', '12050974247', '26', 'P', 'Y');
 
 -- ----------------------------
--- Table structure for master_pengumuman
+-- Table structure for `master_pengumuman`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_pengumuman`;
 CREATE TABLE `master_pengumuman` (
@@ -156,15 +156,17 @@ CREATE TABLE `master_pengumuman` (
   `aktif_pengumuman` enum('','T','Y') DEFAULT 'Y',
   `tgl_pengumuman` date DEFAULT NULL,
   PRIMARY KEY (`id_pengumuman`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of master_pengumuman
 -- ----------------------------
-INSERT INTO `master_pengumuman` VALUES ('1', 'ttetete', '<p style=\"text-align: center;\"><img alt=\"\" src=\"/Pictures/220px_Bung_Tomo.jpg\" style=\"height:301px; width:220px\" /></p>\r\n\r\n<p>jhkjk</p>\r\n\r\n<p>kjkjhkj</p>\r\n', 'Y', null);
+INSERT INTO `master_pengumuman` VALUES ('1', 'ttetete', '<p style=\"text-align: center;\"><img alt=\"\" src=\"/Pictures/220px_Bung_Tomo.jpg\" style=\"height:301px; width:220px\" /></p>\r\n\r\n<p>jhkjk</p>\r\n\r\n<p>kjkjhkj</p>\r\n', 'Y', '2015-12-22');
+INSERT INTO `master_pengumuman` VALUES ('2', 'Pengumuman Terbaru Natal', '<p style=\"text-align: center;\"><img alt=\"\" src=\"/spkbeasiswa/Pictures/76cjiw.jpg\" style=\"height:360px; width:480px\" /></p>\r\n\r\n<p style=\"text-align: center;\">deskripsi test</p>\r\n', '', '2015-12-01');
+INSERT INTO `master_pengumuman` VALUES ('3', 'Pengumuman Tahun baru', '<p style=\"text-align: center;\"><img alt=\"\" src=\"/spkbeasiswa/Pictures/76cjiw.jpg\" style=\"height:360px; width:480px\" /></p>\r\n\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n\r\n<p>ini pengumuman tahun baru</p>\r\n', 'Y', '2015-12-27');
 
 -- ----------------------------
--- Table structure for master_prodi
+-- Table structure for `master_prodi`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_prodi`;
 CREATE TABLE `master_prodi` (
@@ -198,7 +200,7 @@ INSERT INTO `master_prodi` VALUES ('18', 'D3 TATA BOGA', '5');
 INSERT INTO `master_prodi` VALUES ('19', 'D3 TATA BUSANA', '5');
 
 -- ----------------------------
--- Table structure for master_syarat_beasiswa
+-- Table structure for `master_syarat_beasiswa`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_syarat_beasiswa`;
 CREATE TABLE `master_syarat_beasiswa` (
@@ -217,7 +219,7 @@ INSERT INTO `master_syarat_beasiswa` VALUES ('6', 'Surat Surat keterangan pengha
 INSERT INTO `master_syarat_beasiswa` VALUES ('7', 'Sertifikat penunjang');
 
 -- ----------------------------
--- Table structure for master_user
+-- Table structure for `master_user`
 -- ----------------------------
 DROP TABLE IF EXISTS `master_user`;
 CREATE TABLE `master_user` (
@@ -249,7 +251,7 @@ INSERT INTO `master_user` VALUES ('25', 'galuh', 'e10adc3949ba59abbe56e057f20f88
 INSERT INTO `master_user` VALUES ('26', 'isni', 'e10adc3949ba59abbe56e057f20f883e', 'ISNI WIDAYANTI', '3', 'Y');
 
 -- ----------------------------
--- Table structure for ranking
+-- Table structure for `ranking`
 -- ----------------------------
 DROP TABLE IF EXISTS `ranking`;
 CREATE TABLE `ranking` (
@@ -268,7 +270,7 @@ INSERT INTO `ranking` VALUES ('1', '4', '0.4');
 INSERT INTO `ranking` VALUES ('1', '5', '-0.1');
 
 -- ----------------------------
--- Table structure for transaksi_beasiswa
+-- Table structure for `transaksi_beasiswa`
 -- ----------------------------
 DROP TABLE IF EXISTS `transaksi_beasiswa`;
 CREATE TABLE `transaksi_beasiswa` (
@@ -287,7 +289,7 @@ CREATE TABLE `transaksi_beasiswa` (
 INSERT INTO `transaksi_beasiswa` VALUES ('1', '1', '2015-11-01', '2015-12-30', '2015-12-30', '12345/KJL/2012');
 
 -- ----------------------------
--- Table structure for transaksi_kriteria
+-- Table structure for `transaksi_kriteria`
 -- ----------------------------
 DROP TABLE IF EXISTS `transaksi_kriteria`;
 CREATE TABLE `transaksi_kriteria` (
@@ -363,7 +365,7 @@ INSERT INTO `transaksi_kriteria` VALUES ('59', '22', '12', '4');
 INSERT INTO `transaksi_kriteria` VALUES ('60', '23', '12', '5');
 
 -- ----------------------------
--- Table structure for transaksi_pendaftaran
+-- Table structure for `transaksi_pendaftaran`
 -- ----------------------------
 DROP TABLE IF EXISTS `transaksi_pendaftaran`;
 CREATE TABLE `transaksi_pendaftaran` (
@@ -395,7 +397,7 @@ INSERT INTO `transaksi_pendaftaran` VALUES ('11', '16', '1', '2015-12-01', null,
 INSERT INTO `transaksi_pendaftaran` VALUES ('12', '17', '1', '2015-12-01', null, '26', '1', null);
 
 -- ----------------------------
--- Table structure for transaksi_syarat_beasiswa
+-- Table structure for `transaksi_syarat_beasiswa`
 -- ----------------------------
 DROP TABLE IF EXISTS `transaksi_syarat_beasiswa`;
 CREATE TABLE `transaksi_syarat_beasiswa` (
@@ -480,25 +482,25 @@ INSERT INTO `transaksi_syarat_beasiswa` VALUES ('67', '12', 'Untitled-4.jpg', 'T
 INSERT INTO `transaksi_syarat_beasiswa` VALUES ('68', '12', 'Untitled-6.jpg', 'T', '6');
 
 -- ----------------------------
--- View structure for view_kriteria_pendaftaran
+-- View structure for `view_kriteria_pendaftaran`
 -- ----------------------------
 DROP VIEW IF EXISTS `view_kriteria_pendaftaran`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `view_kriteria_pendaftaran` AS select `tk`.`id_transaksi_kriteria` AS `id_transaksi_kriteria`,`tk`.`id_detail_kriteria` AS `id_detail_kriteria`,`tk`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`tk`.`id_kriteria` AS `id_kriteria`,`mdk`.`bobot_detail_kriteria` AS `bobot_detail_kriteria`,`tp`.`id_status` AS `id_status`,`tp`.`id_transaksi_beasiswa` AS `id_transaksi_beasiswa` from ((`transaksi_kriteria` `tk` join `master_detail_kriteria` `mdk` on((`tk`.`id_detail_kriteria` = `mdk`.`id_detail_kriteria`))) join `transaksi_pendaftaran` `tp` on(((`tk`.`id_transaksi_pendaftaran` = `tp`.`id_transaksi_pendaftaran`) and (`tp`.`id_status` = 2)))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_kriteria_pendaftaran` AS select `tk`.`id_transaksi_kriteria` AS `id_transaksi_kriteria`,`tk`.`id_detail_kriteria` AS `id_detail_kriteria`,`tk`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`tk`.`id_kriteria` AS `id_kriteria`,`mdk`.`bobot_detail_kriteria` AS `bobot_detail_kriteria`,`tp`.`id_status` AS `id_status`,`tp`.`id_transaksi_beasiswa` AS `id_transaksi_beasiswa` from ((`transaksi_kriteria` `tk` join `master_detail_kriteria` `mdk` on((`tk`.`id_detail_kriteria` = `mdk`.`id_detail_kriteria`))) join `transaksi_pendaftaran` `tp` on(((`tk`.`id_transaksi_pendaftaran` = `tp`.`id_transaksi_pendaftaran`) and (`tp`.`id_status` = 2))));
 
 -- ----------------------------
--- View structure for view_mahasiswa
+-- View structure for `view_mahasiswa`
 -- ----------------------------
 DROP VIEW IF EXISTS `view_mahasiswa`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `view_mahasiswa` AS select `master_mahasiswa`.`id_mahasiswa` AS `id_mahasiswa`,`master_mahasiswa`.`jenis_kelamin` AS `jenis_kelamin`,`master_mahasiswa`.`nama_mahasiswa` AS `nama_mahasiswa`,`master_mahasiswa`.`alamat_mahasiswa` AS `alamat_mahasiswa`,`master_mahasiswa`.`telpon_mahasiswa` AS `telpon_mahasiswa`,`master_mahasiswa`.`foto_mahasiswa` AS `foto_mahasiswa`,`master_mahasiswa`.`prodi_mahasiswa` AS `prodi_mahasiswa`,`master_mahasiswa`.`jurusan_mahasiswa` AS `jurusan_mahasiswa`,`master_mahasiswa`.`nim_mahasiswa` AS `nim_mahasiswa`,`master_mahasiswa`.`id_user` AS `id_user`,`master_prodi`.`nama_prodi` AS `nama_prodi`,`master_jurusan`.`nama_jurusan` AS `nama_jurusan`,`master_user`.`nama_user` AS `nama_user` from (((`master_mahasiswa` left join `master_prodi` on((`master_mahasiswa`.`prodi_mahasiswa` = `master_prodi`.`id_prodi`))) left join `master_jurusan` on((`master_mahasiswa`.`jurusan_mahasiswa` = `master_jurusan`.`id_jurusan`))) left join `master_user` on((`master_mahasiswa`.`id_user` = `master_user`.`id_user`))) where (`master_mahasiswa`.`aktif_mahasiswa` = 'Y') ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_mahasiswa` AS select `master_mahasiswa`.`id_mahasiswa` AS `id_mahasiswa`,`master_mahasiswa`.`jenis_kelamin` AS `jenis_kelamin`,`master_mahasiswa`.`nama_mahasiswa` AS `nama_mahasiswa`,`master_mahasiswa`.`alamat_mahasiswa` AS `alamat_mahasiswa`,`master_mahasiswa`.`telpon_mahasiswa` AS `telpon_mahasiswa`,`master_mahasiswa`.`foto_mahasiswa` AS `foto_mahasiswa`,`master_mahasiswa`.`prodi_mahasiswa` AS `prodi_mahasiswa`,`master_mahasiswa`.`jurusan_mahasiswa` AS `jurusan_mahasiswa`,`master_mahasiswa`.`nim_mahasiswa` AS `nim_mahasiswa`,`master_mahasiswa`.`id_user` AS `id_user`,`master_prodi`.`nama_prodi` AS `nama_prodi`,`master_jurusan`.`nama_jurusan` AS `nama_jurusan`,`master_user`.`nama_user` AS `nama_user` from (((`master_mahasiswa` left join `master_prodi` on((`master_mahasiswa`.`prodi_mahasiswa` = `master_prodi`.`id_prodi`))) left join `master_jurusan` on((`master_mahasiswa`.`jurusan_mahasiswa` = `master_jurusan`.`id_jurusan`))) left join `master_user` on((`master_mahasiswa`.`id_user` = `master_user`.`id_user`))) where (`master_mahasiswa`.`aktif_mahasiswa` = 'Y');
 
 -- ----------------------------
--- View structure for view_pendaftaran
+-- View structure for `view_pendaftaran`
 -- ----------------------------
 DROP VIEW IF EXISTS `view_pendaftaran`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `view_pendaftaran` AS select `tp`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`tp`.`tgl_daftar_mahasiswa` AS `tgl_daftar_mahasiswa`,`tp`.`id_status` AS `id_status`,`tp`.`catatan` AS `catatan`,`tp`.`ranking_spk` AS `ranking_spk`,`tb`.`no_surat_pengesahan` AS `no_surat_pengesahan`,`tb`.`tgl_pengesahan_beasiswa` AS `tgl_pengesahan_beasiswa`,`mm`.`id_mahasiswa` AS `id_mahasiswa`,`mm`.`nama_mahasiswa` AS `nama_mahasiswa`,`mm`.`alamat_mahasiswa` AS `alamat_mahasiswa`,`mm`.`telpon_mahasiswa` AS `telpon_mahasiswa`,`mm`.`foto_mahasiswa` AS `foto_mahasiswa`,`mm`.`prodi_mahasiswa` AS `prodi_mahasiswa`,`mm`.`jurusan_mahasiswa` AS `jurusan_mahasiswa`,`mm`.`nim_mahasiswa` AS `nim_mahasiswa`,`mm`.`id_user` AS `id_user`,`mb`.`nama_beasiswa` AS `nama_beasiswa`,`mj`.`nama_jurusan` AS `nama_jurusan`,`mp`.`nama_prodi` AS `nama_prodi` from (((((`transaksi_pendaftaran` `tp` join `master_mahasiswa` `mm` on((`tp`.`id_mahasiswa` = `mm`.`id_mahasiswa`))) join `transaksi_beasiswa` `tb` on((`tp`.`id_transaksi_beasiswa` = `tb`.`id_transaksi_beasiswa`))) join `master_beasiswa` `mb` on((`tb`.`id_master_beasiswa` = `mb`.`id_beasiswa`))) join `master_jurusan` `mj` on((`mm`.`jurusan_mahasiswa` = `mj`.`id_jurusan`))) join `master_prodi` `mp` on((`mm`.`prodi_mahasiswa` = `mp`.`id_prodi`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pendaftaran` AS select `tp`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`tp`.`tgl_daftar_mahasiswa` AS `tgl_daftar_mahasiswa`,`tp`.`id_status` AS `id_status`,`tp`.`catatan` AS `catatan`,`tp`.`ranking_spk` AS `ranking_spk`,`tb`.`no_surat_pengesahan` AS `no_surat_pengesahan`,`tb`.`tgl_pengesahan_beasiswa` AS `tgl_pengesahan_beasiswa`,`mm`.`id_mahasiswa` AS `id_mahasiswa`,`mm`.`nama_mahasiswa` AS `nama_mahasiswa`,`mm`.`alamat_mahasiswa` AS `alamat_mahasiswa`,`mm`.`telpon_mahasiswa` AS `telpon_mahasiswa`,`mm`.`foto_mahasiswa` AS `foto_mahasiswa`,`mm`.`prodi_mahasiswa` AS `prodi_mahasiswa`,`mm`.`jurusan_mahasiswa` AS `jurusan_mahasiswa`,`mm`.`nim_mahasiswa` AS `nim_mahasiswa`,`mm`.`id_user` AS `id_user`,`mb`.`nama_beasiswa` AS `nama_beasiswa`,`mj`.`nama_jurusan` AS `nama_jurusan`,`mp`.`nama_prodi` AS `nama_prodi` from (((((`transaksi_pendaftaran` `tp` join `master_mahasiswa` `mm` on((`tp`.`id_mahasiswa` = `mm`.`id_mahasiswa`))) join `transaksi_beasiswa` `tb` on((`tp`.`id_transaksi_beasiswa` = `tb`.`id_transaksi_beasiswa`))) join `master_beasiswa` `mb` on((`tb`.`id_master_beasiswa` = `mb`.`id_beasiswa`))) join `master_jurusan` `mj` on((`mm`.`jurusan_mahasiswa` = `mj`.`id_jurusan`))) join `master_prodi` `mp` on((`mm`.`prodi_mahasiswa` = `mp`.`id_prodi`)));
 
 -- ----------------------------
--- View structure for view_ranking
+-- View structure for `view_ranking`
 -- ----------------------------
 DROP VIEW IF EXISTS `view_ranking`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `view_ranking` AS select `tb`.`id_transaksi_beasiswa` AS `id_transaksi_beasiswa`,`rk`.`nilai_akhir` AS `nilai_akhir`,`rk`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`mm`.`nim_mahasiswa` AS `nim_mahasiswa`,`mm`.`nama_mahasiswa` AS `nama_mahasiswa`,`tb`.`tgl_akhir_beasiswa` AS `tgl_akhir_beasiswa`,`tb`.`tgl_awal_beasiswa` AS `tgl_awal_beasiswa`,`mb`.`nama_beasiswa` AS `nama_beasiswa` from ((((`ranking` `rk` join `transaksi_pendaftaran` `tp` on((`rk`.`id_transaksi_pendaftaran` = `tp`.`id_transaksi_pendaftaran`))) join `transaksi_beasiswa` `tb` on((`tp`.`id_transaksi_beasiswa` = `tb`.`id_transaksi_beasiswa`))) join `master_mahasiswa` `mm` on((`tp`.`id_mahasiswa` = `mm`.`id_mahasiswa`))) join `master_beasiswa` `mb` on((`mb`.`id_beasiswa` = `tb`.`id_master_beasiswa`))) order by `rk`.`nilai_akhir` desc ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_ranking` AS select `tb`.`id_transaksi_beasiswa` AS `id_transaksi_beasiswa`,`rk`.`nilai_akhir` AS `nilai_akhir`,`rk`.`id_transaksi_pendaftaran` AS `id_transaksi_pendaftaran`,`mm`.`nim_mahasiswa` AS `nim_mahasiswa`,`mm`.`nama_mahasiswa` AS `nama_mahasiswa`,`tb`.`tgl_akhir_beasiswa` AS `tgl_akhir_beasiswa`,`tb`.`tgl_awal_beasiswa` AS `tgl_awal_beasiswa`,`mb`.`nama_beasiswa` AS `nama_beasiswa` from ((((`ranking` `rk` join `transaksi_pendaftaran` `tp` on((`rk`.`id_transaksi_pendaftaran` = `tp`.`id_transaksi_pendaftaran`))) join `transaksi_beasiswa` `tb` on((`tp`.`id_transaksi_beasiswa` = `tb`.`id_transaksi_beasiswa`))) join `master_mahasiswa` `mm` on((`tp`.`id_mahasiswa` = `mm`.`id_mahasiswa`))) join `master_beasiswa` `mb` on((`mb`.`id_beasiswa` = `tb`.`id_master_beasiswa`))) order by `rk`.`nilai_akhir` desc;

@@ -79,6 +79,7 @@ class Mod_pengumuman extends CI_Model {
         $data['desc_pengumuman'] = $this->input->post('desc');
         switch ($task) {
             case 'tambah':
+				$data['tgl_pengumuman']= date('Y-m-d');
                 $this->db->insert('master_pengumuman', $data);
                 break;
             case 'ubah':
@@ -88,7 +89,7 @@ class Mod_pengumuman extends CI_Model {
             case 'hapus':
                 $aktif = $this->input->post('aktif');
                 if ($aktif == 'Y') {
-                	$aktif = 'N';
+                	$aktif = 'T';
                 	$task = 'non aktifkan';
                 }else{
                 	$aktif = 'Y';

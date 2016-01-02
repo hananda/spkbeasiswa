@@ -44,13 +44,13 @@
             </div>
         </div> -->
         <div class="col-md-12">
-            <div class="callout callout-info">
-                <h4>Selamat Datang</h4>
-                <p>Di Aplikasi SPK Beasiswa</p>
+            <div class="callout callout-info" style="text-align:center;">
+                <h2>Selamat Datang</h2>
+                <h3>Di Aplikasi SPK Beasiswa</h3>
             </div>
         </div>
     </div>
-    <h2>Pengumuman</h2>
+    <center><h2>Pengumuman</h2></center>
     <div class="row">
         <?php if ($pengumuman): ?>
             <?php foreach ($pengumuman->result() as $r): ?>
