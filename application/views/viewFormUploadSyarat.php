@@ -70,7 +70,7 @@
                                                 url: "<?php echo base_url(); ?>con_formpengajuanbeasiswa/uploadberkas/<?php echo $id; ?>/<?php echo $r->id_syarat_beasiswa; ?>",
                                                 dragDrop:true,
                                                 fileName: "myfile",
-                                                allowedTypes:"jpg,png,gif,doc,pdf,zip", 
+                                                allowedTypes:"jpg,png,gif,doc,pdf,zip,jpeg", 
                                                 returnType:"json",
                                                  onSuccess:function(files,data,xhr)
                                                 {
